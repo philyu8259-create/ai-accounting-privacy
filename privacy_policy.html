@@ -5,27 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隐私政策 — AI记账鸭</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
-    h1 { color: #10B981; border-bottom: 2px solid #10B981; padding-bottom: 10px; }
-    h2 { color: #059669; margin-top: 30px; }
-    h3 { color: #047857; margin-top: 20px; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+      line-height: 1.85;
+      color: #1f1f1f;
+      background: #fff;
+    }
+    h1 {
+      color: #10B981;
+      font-size: 24px;
+      border-bottom: 2px solid #10B981;
+      padding-bottom: 12px;
+      margin-top: 0;
+    }
+    h2 {
+      color: #059669;
+      font-size: 17px;
+      margin-top: 36px;
+      border-left: 4px solid #10B981;
+      padding-left: 12px;
+    }
+    h3 { color: #047857; font-size: 15px; margin-top: 20px; }
     p { margin: 10px 0; }
-    ul { padding-left: 25px; }
-    li { margin: 5px 0; }
-    .meta { color: #888; font-size: 14px; margin-bottom: 30px; }
-    hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
-    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-    th, td { border: 1px solid #eee; padding: 10px; text-align: left; }
-    th { background: #f8f8f8; color: #333; }
-    strong { color: #059669; }
+    ul, ol { padding-left: 24px; margin: 8px 0; }
+    li { margin: 6px 0; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th { background: #f3faf6; color: #059669; }
+    tr:nth-child(even) td { background: #fafafa; }
+    a { color: #10B981; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta {
+      color: #888;
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+    .no-bullets { list-style: none; padding-left: 0; }
+    .no-bullets li { padding-left: 1em; text-indent: -1em; }
+    .prohibit-list { list-style: none; padding-left: 0; color: #dc2626; }
+    .prohibit-list li::before { content: '✗ '; }
+    .allow-list { list-style: none; padding-left: 0; color: #059669; }
+    .allow-list li::before { content: '✓ '; }
+    hr { border: none; border-top: 1px solid #e5e7eb; margin: 32px 0; }
+    @media (max-width: 600px) {
+      table { font-size: 12px; }
+      th, td { padding: 8px 10px; }
+    }
   </style>
 </head>
 <body>
 
 <h1>隐私政策 — AI记账鸭</h1>
-<p class="meta">更新日期：2026年3月29日 &nbsp;|&nbsp; 生效日期：2026年3月29日</p>
+<p class="meta">更新日期：2026年3月28日 &nbsp;|&nbsp; 生效日期：2026年3月28日</p>
 
-<p>AI记账鸭（以下简称「我们」）深知个人信息对您的重要性，并会尽全力保护您的个人隐私安全。依据《中华人民共和国个人信息保护法》《中华人民共和国网络安全法》及相关法律法规，我们制定本隐私政策，向您说明我们如何收集、使用、存储、保护您的个人信息，以及您享有的相关权利。</p>
+<p><strong>AI记账鸭</strong>（以下简称「我们」）深知个人信息对您的重要性，并会尽全力保护您的个人隐私安全。依据《中华人民共和国个人信息保护法》《中华人民共和国网络安全法》及相关法律法规，我们制定本隐私政策，向您说明我们如何收集、使用、存储、保护您的个人信息，以及您享有的相关权利。</p>
 
 ---
 
@@ -36,7 +82,7 @@
   <li><strong>账单数据：</strong>金额、类目（收入/支出）、日期、备注、关联账户等记账相关信息</li>
   <li><strong>资产数据：</strong>账户名称、账户余额、资产类型（现金/银行卡/支付宝/微信/投资账户等）</li>
   <li><strong>自定义分类：</strong>您自行创建的支出/收入分类</li>
-  <li><strong>语音输入内容：</strong>您通过语音方式输入的记账内容（语音数据在本地处理后即删除，不在服务器存储）</li>
+  <li><strong>语音输入：</strong>您通过语音方式输入的记账内容（语音数据在本地处理后即删除，不在服务器存储）</li>
   <li><strong>票据图片：</strong>您上传的小票/发票/收据照片（用于 OCR 文字识别，识别完成后原图不在服务器存储）</li>
 </ul>
 
@@ -51,56 +97,51 @@
 <p>当您使用以下第三方服务时，其将依据自有隐私政策独立收集和处理您的数据：</p>
 
 <table>
-  <tr>
-    <th>第三方服务</th>
-    <th>收集的信息</th>
-    <th>用途</th>
-  </tr>
-  <tr>
-    <td>阿里云·通义千问</td>
-    <td>您输入的账单文本或语音转文字内容</td>
-    <td>AI 语义解析，识别记账意图并生成结构化账单</td>
-  </tr>
-  <tr>
-    <td>阿里云·百炼OCR</td>
-    <td>您上传的票据图片</td>
-    <td>从票据图像中提取金额、商家、商品等账单信息</td>
-  </tr>
-  <tr>
-    <td>阿里云·ASR</td>
-    <td>您的语音音频流</td>
-    <td>将语音实时转换为可识别的文本</td>
-  </tr>
-  <tr>
-    <td>阿里云·短信服务（Dypnsapi）</td>
-    <td>手机号、验证码</td>
-    <td>发送登录验证码，完成手机号身份验证</td>
-  </tr>
-  <tr>
-    <td>阿里云·函数计算</td>
-    <td>您的账单数据、资产数据、自定义分类</td>
-    <td>云端数据存储与多设备同步</td>
-  </tr>
-  <tr>
-    <td>Apple ID（Sign in with Apple）</td>
-    <td>Apple 提供的用户标识符（姓名、邮箱可选）</td>
-    <td>账号登录与身份认证</td>
-  </tr>
-  <tr>
-    <td>Apple 应用内购买（In-App Purchase）</td>
-    <td>购买记录、订阅状态</td>
-    <td>提供 VIP 会员订阅服务</td>
-  </tr>
+  <thead>
+    <tr><th>第三方服务</th><th>收集的信息</th><th>用途</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>阿里云·通义千问</td>
+      <td>您输入的账单文本或语音转文字内容</td>
+      <td>AI 语义解析，识别记账意图并生成结构化账单</td>
+    </tr>
+    <tr>
+      <td>阿里云·OCR</td>
+      <td>您上传的票据图片</td>
+      <td>从票据图像中提取金额、商家、商品等账单信息</td>
+    </tr>
+    <tr>
+      <td>阿里云·ASR</td>
+      <td>您的语音音频流</td>
+      <td>将语音实时转换为可识别的文本</td>
+    </tr>
+    <tr>
+      <td>腾讯云·CloudBase</td>
+      <td>您的账单数据、资产数据、自定义分类</td>
+      <td>云端数据存储与多设备同步</td>
+    </tr>
+    <tr>
+      <td>Apple ID（Sign in with Apple）</td>
+      <td>Apple 提供的用户标识符（姓名、邮箱可选）</td>
+      <td>账号登录与身份认证</td>
+    </tr>
+    <tr>
+      <td>极光推送（或其他推送服务）</td>
+      <td>设备 Token、设备信息</td>
+      <td>推送记账提醒、月度报告等通知</td>
+    </tr>
+  </tbody>
 </table>
 
-<p><strong>说明：</strong>上述第三方服务均已与我们签订数据处理协议/条款，我们仅传递为您提供服务所必需的最少信息，不进行超额传递。</p>
+<p><em>说明：上述第三方服务均已与我们签订数据处理协议/条款，我们仅传递为您提供服务所必需的最少信息，不进行超额传递。</em></p>
 
 ---
 
 <h2>二、我们如何使用您的信息</h2>
 
 <p>我们严格限制数据使用范围，仅将数据用于为您提供核心记账服务，包括：</p>
-<ul>
+<ul class="allow-list">
   <li>记录、分类和分析您的收支情况</li>
   <li>生成月度/年度消费报告</li>
   <li>基于历史数据提供消费预测和预算建议（AI 功能）</li>
@@ -108,18 +149,18 @@
   <li>向您推送重要的账单提醒</li>
 </ul>
 
-<p><strong>我们承诺：</strong></p>
-<ul>
-  <li>❌ 不将您的数据用于广告推送或营销</li>
-  <li>❌ 不与任何无关第三方共享您的数据（法律法规要求除外）</li>
-  <li>❌ 不将您的数据用于任何与记账服务无关的用途</li>
+<p>我们<strong>承诺不会</strong>：</p>
+<ul class="prohibit-list">
+  <li>将您的数据用于广告推送或营销</li>
+  <li>与任何无关第三方共享您的数据（法律法规要求除外）</li>
+  <li>将您的数据用于任何与记账服务无关的用途</li>
 </ul>
 
 ---
 
 <h2>三、数据存储与安全</h2>
 <ul>
-  <li><strong>存储地点：</strong>您的账单数据存储于阿里云函数计算（位于中国境内的服务器）</li>
+  <li><strong>存储地点：</strong>您的账单数据存储于腾讯云 CloudBase（位于中国境内的服务器）</li>
   <li><strong>传输安全：</strong>所有数据传输采用 TLS 1.2 及以上加密</li>
   <li><strong>访问控制：</strong>云端数据库实行权限分级管理，相关人员均需通过实名认证</li>
   <li><strong>本地数据：</strong>存储在您设备本地，仅您本人可访问；卸载应用将清除本地数据</li>
@@ -137,25 +178,29 @@
 
 <h2>五、数据删除</h2>
 <p>您可以随时通过以下方式删除您的数据：</p>
-<ul>
+<ol>
   <li><strong>在应用内删除：</strong>单条账单可逐条删除</li>
   <li><strong>注销全部数据：</strong>联系客服申请账号注销，我们将删除与您账号关联的所有数据</li>
   <li><strong>卸载应用：</strong>卸载后本地缓存数据将从设备中清除（已同步至云端的数据需通过账号注销方式删除）</li>
-</ul>
+</ol>
 
 ---
 
 <h2>六、您的权利</h2>
-<p>依据相关法律，您享有以下权利：</p>
 <table>
-  <tr><th>权利</th><th>说明</th></tr>
-  <tr><td>知情权</td><td>了解我们如何收集和使用您的数据</td></tr>
-  <tr><td>访问权</td><td>查看我们持有的您的个人信息</td></tr>
-  <tr><td>更正权</td><td>要求更正不准确的个人信息</td></tr>
-  <tr><td>删除权</td><td>要求删除您的个人数据</td></tr>
-  <tr><td>数据可携带权</td><td>通过「导出账单」功能获取您的账单数据副本</td></tr>
-  <tr><td>撤回同意权</td><td>可联系客服撤回您之前给予的授权同意</td></tr>
+  <thead>
+    <tr><th>权利</th><th>说明</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>知情权</td><td>了解我们如何收集和使用您的数据</td></tr>
+    <tr><td>访问权</td><td>查看我们持有的您的个人信息</td></tr>
+    <tr><td>更正权</td><td>要求更正不准确的个人信息</td></tr>
+    <tr><td>删除权</td><td>要求删除您的个人数据</td></tr>
+    <tr><td>数据可携带权</td><td>通过「导出账单」功能获取您的账单数据副本</td></tr>
+    <tr><td>撤回同意权</td><td>可联系客服撤回您之前给予的授权同意</td></tr>
+  </tbody>
 </table>
+<p>如需行使上述任何权利，请通过文末联系方式联系我们。</p>
 
 ---
 
@@ -175,21 +220,20 @@
 ---
 
 <h2>十、政策更新</h2>
-<p>如我们对本隐私政策进行重大变更，将通过应用内通知或更新的隐私政策页面告知您。重大变更包括但不限于：数据收集范围变化、第三方服务商变更、数据用途变更等。</p>
-<p>继续使用我们的服务即表示您同意更新后的隐私政策。</p>
+<p>如我们对本隐私政策进行重大变更，将通过应用内通知或更新的隐私政策页面告知您。重大变更包括但不限于：数据收集范围变化、第三方服务商变更、数据用途变更等。继续使用我们的服务即表示您同意更新后的隐私政策。</p>
 
 ---
 
 <h2>十一、联系我们</h2>
 <p>如您对本隐私政策有任何疑问、意见或建议，或在使用过程中遇到任何问题，请通过以下方式联系我们：</p>
-<ul>
-  <li><strong>邮件：</strong>philyu2023@qq.com</li>
+<ul class="no-bullets">
+  <li>📱 <strong>应用内：</strong>进入「设置 → 客服与帮助」联系在线客服</li>
+  <li>📧 <strong>邮件：</strong>privacy@aiaccountant.app</li>
 </ul>
-
 <p>我们将在合理期限内予以回复。</p>
 
 <hr>
-<p><em>最后更新：2026年3月29日</em></p>
+<p style="color:#888;font-size:13px;text-align:center">最后更新：2026年3月28日 &nbsp;|&nbsp; AI记账鸭</p>
 
 </body>
 </html>
