@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | AI Duck Ledger (International Version)</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 860px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
+    h1 { color: #10B981; border-bottom: 2px solid #10B981; padding-bottom: 10px; }
+    h2 { color: #059669; margin-top: 30px; }
+    h3 { color: #047857; margin-top: 20px; }
+    p { margin: 10px 0; }
+    ul { padding-left: 25px; }
+    li { margin: 5px 0; }
+    .meta { color: #888; font-size: 14px; margin-bottom: 30px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+    th, td { border: 1px solid #eee; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #f8f8f8; color: #333; }
+    strong { color: #059669; }
+    code { background: #f6f6f6; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy | AI Duck Ledger (International Version)</h1>
+<p class="meta">Updated: April 13, 2026 &nbsp;|&nbsp; Effective: April 13, 2026</p>
+
+<p>This Privacy Policy applies to the <strong>international version</strong> of AI Duck Ledger ("we", "us", or "our"). It explains what information the app processes, how the app uses it, which third-party services are involved, and what choices you have.</p>
+
+<p>This version of the app currently supports <strong>guest mode</strong>, <strong>email sign in</strong>, <strong>Google sign in</strong>, and <strong>Apple sign in</strong>. It uses <strong>Google Vision</strong> for receipt OCR, <strong>Gemini</strong> for AI parsing and spending insights, <strong>Finnhub</strong> for US stock search and quotes, and <strong>Apple In-App Purchase</strong> for subscriptions.</p>
+
+<hr>
+
+<h2>1. Information the app processes</h2>
+
+<h3>1.1 Information you enter or create</h3>
+<ul>
+  <li><strong>Accounting entries:</strong> amount, type, category, date, notes, and related bookkeeping information.</li>
+  <li><strong>Asset data:</strong> account name, balance, asset type, and related asset records.</li>
+  <li><strong>Stock positions:</strong> ticker symbol, quantity, cost basis, latest quote snapshot, and related portfolio data.</li>
+  <li><strong>Custom categories:</strong> categories you create in the app.</li>
+  <li><strong>Receipt images:</strong> images you choose for OCR processing.</li>
+  <li><strong>Free-text bookkeeping input:</strong> text you type for AI parsing.</li>
+  <li><strong>Voice input text:</strong> speech recognition results that you submit for AI parsing.</li>
+</ul>
+
+<h3>1.2 Account and sign-in information</h3>
+<p>If you use the international sign-in flow, the app may store and process:</p>
+<ul>
+  <li><strong>Email sign in:</strong> the email address you enter.</li>
+  <li><strong>Google sign in:</strong> your Google account email address and display name returned by Google.</li>
+  <li><strong>Apple sign in:</strong> your Apple-provided user identifier and, when available, your email address and name returned by Apple.</li>
+  <li><strong>Local account state:</strong> sign-in provider, display name, email, and local login status needed to keep you signed in on the device.</li>
+</ul>
+
+<p>Guest mode is also supported. In guest mode, the app can still store bookkeeping data locally on your device, but guest data is not intended for cloud account sync.</p>
+
+<h3>1.3 Device-side and local app data</h3>
+<ul>
+  <li><strong>Local preferences:</strong> locale, country, base currency, consent flags, cached UI state, and similar local settings.</li>
+  <li><strong>Search and quote cache:</strong> cached stock search results and quote refresh timestamps used to improve performance.</li>
+  <li><strong>App diagnostics:</strong> limited logs and transient error information for troubleshooting.</li>
+</ul>
+
+<hr>
+
+<h2>2. Third-party services used by the international version</h2>
+
+<p>The international version uses the following third-party services based on the current application code.</p>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>When used</th>
+    <th>Data involved</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>Google Vision API</td>
+    <td>When you scan or upload a receipt image</td>
+    <td>Receipt image content</td>
+    <td>OCR text extraction</td>
+  </tr>
+  <tr>
+    <td>Google Gemini API</td>
+    <td>When you use AI parsing, AI-assisted bookkeeping, or spending prediction</td>
+    <td>Text you submit, OCR-recognized text, voice-recognized text, and summarized spending history needed for prediction</td>
+    <td>Transaction parsing, AI analysis, and spending insights</td>
+  </tr>
+  <tr>
+    <td>Finnhub</td>
+    <td>When you search US stocks or refresh US stock quotes</td>
+    <td>Stock search keywords and ticker symbols</td>
+    <td>US stock search and market quote retrieval</td>
+  </tr>
+  <tr>
+    <td>Google Sign-In</td>
+    <td>When you choose Google sign in</td>
+    <td>Google account profile data returned during sign-in, such as email and display name</td>
+    <td>Authentication</td>
+  </tr>
+  <tr>
+    <td>Sign in with Apple</td>
+    <td>When you choose Apple sign in</td>
+    <td>Apple user identifier and, when provided by Apple, your email and name</td>
+    <td>Authentication</td>
+  </tr>
+  <tr>
+    <td>Apple In-App Purchase</td>
+    <td>When you purchase or restore a subscription</td>
+    <td>Purchase records, transaction state, and subscription status</td>
+    <td>VIP subscription management</td>
+  </tr>
+  <tr>
+    <td>Alibaba Cloud Function Compute backend</td>
+    <td>When signed-in users sync data</td>
+    <td>Bookkeeping entries, asset data, stock position data, VIP profile data, and account-scoped sync identifiers</td>
+    <td>Cloud sync and account data storage</td>
+  </tr>
+</table>
+
+<p><strong>Important:</strong> the international version does <strong>not</strong> use the China-version OCR and AI stack described in the Chinese app flow, such as Baidu OCR or Qwen, for its primary OCR and AI parsing path.</p>
+
+<hr>
+
+<h2>3. How the app uses your information</h2>
+<ul>
+  <li>To let you create, edit, delete, and organize bookkeeping records and assets.</li>
+  <li>To sync your data across sessions and devices when you use a signed-in account.</li>
+  <li>To perform receipt OCR and AI-based transaction parsing when you explicitly trigger those features.</li>
+  <li>To generate spending prediction, warnings, and AI insights based on your existing records.</li>
+  <li>To provide US stock lookup and quote refresh for stock positions.</li>
+  <li>To manage VIP subscription status and purchase restoration.</li>
+  <li>To remember your selected locale, currency, and related preferences.</li>
+</ul>
+
+<hr>
+
+<h2>4. Guest mode, signed-in mode, and cloud sync</h2>
+
+<h3>4.1 Guest mode</h3>
+<p>If you use the app in guest mode, your data is primarily stored locally on your device. Guest mode is intended for local use and is not the main cloud-synced account flow.</p>
+
+<h3>4.2 Signed-in mode</h3>
+<p>If you sign in with email, Google, or Apple, the app may sync bookkeeping data, asset data, stock positions, and VIP-related records to the configured cloud backend.</p>
+
+<p>The current code uses an account-scoped identifier for sync requests. Depending on the sign-in method, this identifier may be based on your email address or a provider-derived account key.</p>
+
+<hr>
+
+<h2>5. AI, OCR, and voice input</h2>
+
+<h3>5.1 Receipt OCR</h3>
+<p>When you choose the receipt OCR feature, the selected image is sent to Google Vision for text extraction.</p>
+
+<h3>5.2 AI text parsing and prediction</h3>
+<p>When you submit bookkeeping text, OCR-recognized text, or prediction requests, the relevant text content is sent to Gemini so the app can parse transactions or generate spending analysis.</p>
+
+<h3>5.3 Voice input</h3>
+<p>The app can use platform speech recognition capabilities to convert your speech into text on supported devices. If you then submit that recognized text for AI parsing, the recognized text may be sent to Gemini. The app does not describe its international voice feature as a direct raw-audio upload to the app's own backend in the current product flow.</p>
+
+<h3>5.4 Consent records</h3>
+<p>The app stores local consent flags for OCR, text AI, and voice-related privacy prompts so you do not have to confirm the same prompt every time. These consent flags are stored locally and can be cleared from the app when supported.</p>
+
+<hr>
+
+<h2>6. Stock market data</h2>
+<p>If you use the US stock feature, the app may send stock symbols or search keywords to Finnhub to retrieve search results or market quotes. The international version is configured for <strong>US stock scope</strong>.</p>
+
+<hr>
+
+<h2>7. Data storage and retention</h2>
+<ul>
+  <li><strong>Local storage:</strong> the app stores some data on your device, including settings, cached data, login state, and local records.</li>
+  <li><strong>Cloud storage:</strong> signed-in account data may be stored through the configured cloud sync backend.</li>
+  <li><strong>Retention:</strong> we generally retain data for as long as needed to provide the app features, unless you delete it, request account/data deletion, or local app removal clears device-side data.</li>
+</ul>
+
+<p>Uninstalling the app can remove locally stored data from your device, but cloud-synced data may continue to exist until it is deleted from the cloud account scope.</p>
+
+<hr>
+
+<h2>8. Your choices and deletion requests</h2>
+<ul>
+  <li>You can delete individual bookkeeping records or asset records from within the app where supported.</li>
+  <li>You can sign out of the app, which clears the local login state on the device.</li>
+  <li>If you want cloud-synced account data deleted for the international sign-in flow, please contact us using the email below.</li>
+</ul>
+
+<p>Some account deletion flows may not yet be fully self-serve in the current app UI. If that applies to your account, please contact us directly.</p>
+
+<hr>
+
+<h2>9. Children’s privacy</h2>
+<p>The app is not intended for children under 18, and we do not knowingly design this international bookkeeping flow for minors.</p>
+
+<hr>
+
+<h2>10. Cookies and tracking</h2>
+<p>The app is not a web tracking product and does not use browser-style cookies inside the native app for advertising tracking.</p>
+
+<hr>
+
+<h2>11. Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time to reflect product, provider, legal, or operational changes. The latest version will be published at the privacy policy URL used by the app.</p>
+
+<hr>
+
+<h2>12. Contact</h2>
+<p>If you have questions, comments, or deletion requests related to this Privacy Policy, please contact:</p>
+<ul>
+  <li><strong>Email:</strong> philyu2023@qq.com</li>
+</ul>
+
+<hr>
+<p><em>Last updated: April 13, 2026</em></p>
+
+</body>
+</html>
