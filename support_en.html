@@ -3,60 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support | AI Duck Ledger</title>
+  <title>Support | AI Wealth Ledger</title>
+
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 860px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
-    h1 { color: #10B981; border-bottom: 2px solid #10B981; padding-bottom: 10px; }
-    h2 { color: #059669; margin-top: 30px; }
+    :root {
+      --bg: #f5fbf8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe7e1;
+      --brand: #10b981;
+      --brand-dark: #059669;
+      --brand-soft: #ecfdf5;
+      --shadow: 0 12px 32px rgba(16, 185, 129, 0.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(180deg, #f3fbf7 0%, #ffffff 260px);
+      color: var(--text);
+      line-height: 1.78;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(16,185,129,0.14) 0%, rgba(16,185,129,0.05) 45%, rgba(255,255,255,0.96) 100%);
+      border: 1px solid rgba(16,185,129,0.14);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: var(--brand-soft);
+      color: var(--brand-dark);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 14px 0 0;
+      color: #374151;
+      font-size: 16px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta span {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(16,185,129,0.1);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 18px 0;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      color: #065f46;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 17px;
+      color: #047857;
+    }
     p { margin: 10px 0; }
-    ul { padding-left: 25px; }
-    li { margin: 5px 0; }
-    .meta { color: #888; font-size: 14px; margin-bottom: 30px; }
-    hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
-    code { background: #f6f6f6; padding: 2px 4px; border-radius: 4px; }
+    ul, ol { margin: 10px 0; padding-left: 22px; }
+    li { margin: 8px 0; }
+    a { color: var(--brand-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #f8fffb;
+      border: 1px solid #d8f3e6;
+      color: #166534;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #e5efe9;
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f7fcfa;
+      color: #065f46;
+      font-weight: 700;
+    }
+    strong { color: #065f46; }
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.95em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .tile {
+      padding: 16px;
+      background: #fcfffd;
+      border: 1px solid #e3f3eb;
+      border-radius: 16px;
+    }
+    .tile h3 { margin-top: 0; }
+    .footer {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      margin-top: 28px;
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 18px 14px 36px; }
+      .hero, .section { padding: 18px; border-radius: 18px; }
+      .meta { gap: 8px; }
+      .meta span { width: 100%; }
+    }
   </style>
+
 </head>
 <body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">Support Center</div>
+      <h1>AI Wealth Ledger Support</h1>
+      <p class="subtitle">If you need product help, want to report a bug, have a billing question, or need account or cloud-data deletion assistance, please contact us here.</p>
+      <div class="meta">
+        <span>Applies to: AI Wealth Ledger</span>
+        <span>Updated: April 15, 2026</span>
+        <span>Support channel: Email</span>
+      </div>
+    </header>
 
-<h1>Support | AI Duck Ledger</h1>
-<p class="meta">International version support page</p>
+    <section class="section">
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:philyu2023@qq.com">philyu2023@qq.com</a></li>
+      </ul>
+      <p>If your request is related to account data, please email us from the address associated with your account whenever possible.</p>
+    </section>
 
-<p>If you need help with AI Duck Ledger, have questions about billing, want to report a bug, or want to request account or cloud-data deletion, please contact us.</p>
+    <section class="section">
+      <h2>What to include in your email</h2>
+      <div class="grid">
+        <div class="tile">
+          <h3>Device details</h3>
+          <p>Your device model, iOS version, and app version.</p>
+        </div>
+        <div class="tile">
+          <h3>Issue details</h3>
+          <p>The page involved, steps to reproduce, expected result, and actual result.</p>
+        </div>
+        <div class="tile">
+          <h3>Helpful attachments</h3>
+          <p>Screenshots, screen recordings, error messages, and the sign-in method you used.</p>
+        </div>
+      </div>
+    </section>
 
-<hr>
+    <section class="section">
+      <h2>Account and data deletion requests</h2>
+      <p>If you want cloud-synced account data deleted, please email us and include the following information:</p>
+      <ul>
+        <li>the account email or sign-in method used</li>
+        <li>the scope of data you want deleted</li>
+        <li>any additional information needed to verify account ownership</li>
+      </ul>
+      <div class="note">To protect account security, we may ask you to confirm account ownership before processing the request.</div>
+    </section>
 
-<h2>Contact</h2>
-<ul>
-  <li><strong>Email:</strong> philyu2023@qq.com</li>
-</ul>
+    <section class="section">
+      <h2>Subscriptions</h2>
+      <p>Subscriptions are billed and managed by Apple. You can manage or cancel your subscription in your App Store account settings.</p>
+    </section>
 
-<hr>
+    <section class="section">
+      <h2>Related pages</h2>
+      <ul>
+        <li><a href="https://philyu8259-create.github.io/ai-accounting-privacy/privacy_policy_en.html">Privacy Policy</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/">Apple Standard EULA</a></li>
+      </ul>
+    </section>
 
-<h2>What to include in your email</h2>
-<ul>
-  <li>device model and iOS version</li>
-  <li>app version</li>
-  <li>the sign-in method you used, if applicable</li>
-  <li>screenshots or steps to reproduce the issue</li>
-</ul>
-
-<hr>
-
-<h2>Account and data deletion requests</h2>
-<p>If you want cloud-synced account data deleted, please email us and include the account email or sign-in method used for the request. For security reasons, we may ask you to confirm account ownership before processing the request.</p>
-
-<hr>
-
-<h2>Subscriptions</h2>
-<p>Subscriptions are billed and managed by Apple. You can manage or cancel your subscription in your App Store account settings.</p>
-
-<hr>
-
-<h2>Related pages</h2>
-<ul>
-  <li><a href="https://philyu8259-create.github.io/ai-accounting-privacy/privacy_policy_en.html">Privacy Policy</a></li>
-  <li><a href="https://philyu8259-create.github.io/ai-accounting-privacy/eula_en.html">Terms of Use (EULA)</a></li>
-</ul>
-
+    <p class="footer">© 2026 AI Wealth Ledger. All rights reserved.</p>
+  </div>
 </body>
 </html>
