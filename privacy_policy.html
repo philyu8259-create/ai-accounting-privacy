@@ -4,324 +4,233 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隐私政策 | AI财富账本</title>
-
   <style>
     :root {
-      --bg: #f5fbf8;
-      --card: #ffffff;
+      --primary: #10b981;
+      --primary-dark: #059669;
       --text: #1f2937;
       --muted: #6b7280;
-      --line: #dbe7e1;
-      --brand: #10b981;
-      --brand-dark: #059669;
-      --brand-soft: #ecfdf5;
-      --shadow: 0 12px 32px rgba(16, 185, 129, 0.08);
-      --radius: 18px;
+      --border: #e5e7eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(180deg, #f3fbf7 0%, #ffffff 260px);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.78;
+      line-height: 1.8;
     }
     .wrap {
-      max-width: 980px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 32px 20px 56px;
     }
-    .hero {
-      background: linear-gradient(135deg, rgba(16,185,129,0.14) 0%, rgba(16,185,129,0.05) 45%, rgba(255,255,255,0.96) 100%);
-      border: 1px solid rgba(16,185,129,0.14);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      margin-bottom: 22px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      background: var(--brand-soft);
-      color: var(--brand-dark);
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(30px, 4vw, 42px);
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-    }
-    .subtitle {
-      margin: 14px 0 0;
-      color: #374151;
-      font-size: 16px;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .meta span {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(16,185,129,0.1);
-      border-radius: 999px;
-      padding: 8px 12px;
-    }
-    .section {
+    .hero, .section {
       background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin: 18px 0;
+      border: 1px solid var(--border);
+      border-radius: 18px;
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
+    .hero {
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+    .section {
+      padding: 24px 28px;
+      margin-top: 16px;
+    }
+    h1, h2, h3 { margin: 0 0 12px; }
+    h1 {
+      color: var(--primary-dark);
+      font-size: 32px;
+      line-height: 1.25;
+    }
     h2 {
-      margin: 0 0 14px;
+      color: var(--primary-dark);
       font-size: 22px;
-      color: #065f46;
-      letter-spacing: -0.01em;
+      margin-top: 4px;
     }
     h3 {
-      margin: 18px 0 10px;
-      font-size: 17px;
       color: #047857;
+      font-size: 18px;
+      margin-top: 18px;
     }
     p { margin: 10px 0; }
-    ul, ol { margin: 10px 0; padding-left: 22px; }
-    li { margin: 8px 0; }
-    a { color: var(--brand-dark); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .note {
-      margin-top: 14px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: #f8fffb;
-      border: 1px solid #d8f3e6;
-      color: #166534;
+    ul { margin: 10px 0; padding-left: 22px; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
     }
-    .table-wrap {
-      overflow-x: auto;
-      margin-top: 14px;
+    .note {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 16px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 680px;
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
+      margin-top: 14px;
+      font-size: 14px;
     }
     th, td {
-      border: 1px solid #e5efe9;
-      padding: 12px 14px;
+      border: 1px solid var(--border);
+      padding: 12px;
       text-align: left;
       vertical-align: top;
     }
     th {
-      background: #f7fcfa;
-      color: #065f46;
-      font-weight: 700;
+      background: #f0fdf4;
+      color: var(--primary-dark);
     }
-    strong { color: #065f46; }
-    code {
-      background: #f3f4f6;
-      padding: 2px 6px;
-      border-radius: 6px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.95em;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-    .tile {
-      padding: 16px;
-      background: #fcfffd;
-      border: 1px solid #e3f3eb;
-      border-radius: 16px;
-    }
-    .tile h3 { margin-top: 0; }
     .footer {
       color: var(--muted);
       font-size: 14px;
       text-align: center;
-      margin-top: 28px;
+      margin-top: 22px;
     }
-    @media (max-width: 640px) {
-      .wrap { padding: 18px 14px 36px; }
-      .hero, .section { padding: 18px; border-radius: 18px; }
-      .meta { gap: 8px; }
-      .meta span { width: 100%; }
-    }
+    a { color: var(--primary-dark); }
   </style>
-
 </head>
 <body>
   <div class="wrap">
-    <header class="hero">
-      <div class="eyebrow">隐私政策</div>
-      <h1>AI财富账本 隐私政策</h1>
-      <p class="subtitle">本页面用于说明 AI财富账本 如何收集、使用、存储和保护个人信息，以及用户享有的相关权利。</p>
-      <div class="meta">
-        <span>更新日期：2026年4月15日</span>
-        <span>生效日期：2026年4月15日</span>
-        <span>产品名称：AI财富账本</span>
-      </div>
-    </header>
-
-    <section class="section">
-      <h2>一、我们收集的信息</h2>
-      <h3>1. 您主动提供的信息</h3>
-      <ul>
-        <li><strong>账单数据：</strong>金额、收支类型、类目、日期、备注及相关记账信息。</li>
-        <li><strong>资产数据：</strong>账户名称、余额、资产类型及相关资产记录。</li>
-        <li><strong>持仓数据：</strong>股票代码、持仓数量、成本价、行情快照及相关资产跟踪信息。</li>
-        <li><strong>自定义分类：</strong>您在应用中自行创建的收入或支出分类。</li>
-        <li><strong>票据图片：</strong>您主动上传用于 OCR 识别的小票、发票或收据图片。</li>
-        <li><strong>文本或语音转写内容：</strong>您提交给 AI 功能解析的文字描述或语音识别结果。</li>
-      </ul>
-
-      <h3>2. 您使用服务时自动产生的信息</h3>
-      <ul>
-        <li><strong>设备信息：</strong>设备型号、操作系统版本、应用版本，用于兼容性适配和问题排查。</li>
-        <li><strong>本地偏好设置：</strong>地区、货币、授权状态、缓存 UI 状态等仅用于本地体验优化的信息。</li>
-        <li><strong>运行日志：</strong>必要的故障诊断日志和异常信息，用于定位和修复产品问题。</li>
-      </ul>
-
-      <div class="note">我们不会在您未主动触发相关功能时，擅自上传票据图片、语音内容或 AI 解析文本。</div>
-    </section>
-
-    <section class="section">
-      <h2>二、第三方服务说明</h2>
-      <p>当您主动使用对应功能时，相关数据可能会发送给第三方服务商进行处理。我们仅传递实现功能所必需的最少信息。</p>
-      <div class="table-wrap">
-        <table>
-          <tr>
-            <th>第三方服务</th>
-            <th>触发场景</th>
-            <th>涉及数据</th>
-            <th>用途</th>
-          </tr>
-          <tr>
-            <td>Google Vision API</td>
-            <td>拍照识别或上传票据时</td>
-            <td>票据图片内容</td>
-            <td>OCR 文字提取</td>
-          </tr>
-          <tr>
-            <td>Google Gemini API</td>
-            <td>使用 AI 记账、文本解析、消费洞察时</td>
-            <td>您提交的文本、OCR 识别文本、语音转写文本，以及用于预测的摘要性支出数据</td>
-            <td>AI 解析、结构化生成账单、消费分析与建议</td>
-          </tr>
-          <tr>
-            <td>Finnhub</td>
-            <td>搜索美股、刷新股票行情时</td>
-            <td>股票代码、搜索关键词</td>
-            <td>市场行情查询</td>
-          </tr>
-          <tr>
-            <td>Google Sign-In</td>
-            <td>选择 Google 登录时</td>
-            <td>Google 返回的邮箱、昵称等账号资料</td>
-            <td>身份认证</td>
-          </tr>
-          <tr>
-            <td>Sign in with Apple</td>
-            <td>选择 Apple 登录时</td>
-            <td>Apple 返回的用户标识、邮箱、姓名（如 Apple 提供）</td>
-            <td>身份认证</td>
-          </tr>
-          <tr>
-            <td>Apple In-App Purchase</td>
-            <td>购买或恢复订阅时</td>
-            <td>交易状态、订阅状态、购买记录</td>
-            <td>会员订阅管理</td>
-          </tr>
-          <tr>
-            <td>阿里云函数计算后端</td>
-            <td>登录后进行云端同步时</td>
-            <td>账单数据、资产数据、持仓数据、会员状态及账户同步标识</td>
-            <td>云端存储与多设备同步</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>三、我们如何使用您的信息</h2>
-      <ul>
-        <li>用于创建、编辑、删除和整理记账记录、资产记录与持仓信息。</li>
-        <li>在您登录账号时，用于多端同步和数据恢复。</li>
-        <li>在您主动触发时，进行票据 OCR、AI 记账解析、消费洞察与趋势预测。</li>
-        <li>用于提供资产跟踪、股票行情刷新、会员状态识别等核心功能。</li>
-        <li>用于保存您的语言、货币、地区等偏好设置，优化使用体验。</li>
-      </ul>
+    <section class="hero">
+      <h1>隐私政策 | AI财富账本</h1>
+      <p class="meta">更新日期：2026年4月15日 · 生效日期：2026年4月15日</p>
+      <p>本隐私政策适用于 <strong>AI财富账本</strong> 中文版。我们依据当前版本代码中已实现并已接入的能力，说明应用如何处理您的个人信息、账本数据与功能授权信息。</p>
       <div class="note">
-        我们承诺：<br>
-        1. 不将您的个人数据用于广告定向投放。<br>
-        2. 不向无关第三方出售您的数据。<br>
-        3. 不超出本政策所述范围使用您的信息。
+        中文版与国际版能力不同。中文版当前以手机号验证码登录为主，OCR 识别使用百度 OCR，AI 文本解析与消费预测使用通义千问，股票能力面向沪深 A 股 / 中国市场，云同步后端链路为阿里云函数计算（FC）。
       </div>
     </section>
 
     <section class="section">
-      <h2>四、数据存储、保留与删除</h2>
-      <div class="grid">
-        <div class="tile">
-          <h3>本地存储</h3>
-          <p>部分数据会保存在您的设备本地，包括偏好设置、缓存信息、登录状态及本地账本记录。</p>
-        </div>
-        <div class="tile">
-          <h3>云端同步</h3>
-          <p>登录账号后，相关账单、资产和持仓数据可能同步到云端，用于多设备访问和恢复。</p>
-        </div>
-        <div class="tile">
-          <h3>删除方式</h3>
-          <p>您可在应用内删除部分记录；如需删除云端账号数据，请通过下方邮箱联系我们。</p>
-        </div>
-      </div>
-      <p>卸载应用会清除设备本地存储的数据，但云端同步数据可能仍保留，直到您提出删除申请并完成处理。</p>
-    </section>
-
-    <section class="section">
-      <h2>五、您的权利</h2>
+      <h2>一、我们可能处理的信息</h2>
+      <h3>1. 您主动输入或在应用内创建的信息</h3>
       <ul>
-        <li><strong>知情权：</strong>了解我们如何收集和使用数据。</li>
-        <li><strong>访问权：</strong>查看我们持有的与您相关的个人信息。</li>
-        <li><strong>更正权：</strong>请求更正不准确或不完整的信息。</li>
-        <li><strong>删除权：</strong>要求删除您的账号数据或相关个人信息。</li>
-        <li><strong>撤回同意权：</strong>停止使用相关功能或联系我们撤回授权。</li>
+        <li>账单数据，例如金额、收支类型、分类、日期、备注、原始输入文本等。</li>
+        <li>资产与持仓数据，例如账户名称、账户类型、余额、股票代码、持仓数量、成本价等。</li>
+        <li>票据图片，即您主动拍摄或选择上传、用于票据识别的小票、发票、收据图片。</li>
+        <li>登录与校验信息，例如手机号，以及发送和校验短信验证码所需的信息。</li>
+        <li>订阅相关信息，例如会员状态、恢复购买结果，以及订阅校验所需的必要信息。</li>
+      </ul>
+
+      <h3>2. 设备本地保存的信息</h3>
+      <ul>
+        <li>本地账单、资产、持仓缓存，以及游客模式下仅保存在本机的数据。</li>
+        <li>登录状态、地区与语言、基础货币、隐私授权记录等配置项。</li>
+        <li>股票搜索缓存、行情刷新时间、页面状态等维持功能运行所需的缓存信息。</li>
+      </ul>
+
+      <h3>3. 设备权限与系统能力</h3>
+      <ul>
+        <li>相机或相册权限：用于拍照记账或导入票据图片。</li>
+        <li>麦克风与语音识别权限：用于语音输入。当前中文版本的语音输入依赖设备系统语音识别能力，代码中未看到已启用的独立第三方云语音识别服务链路。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>二、中文版实际使用的第三方服务</h2>
+      <table>
+        <tr>
+          <th>服务</th>
+          <th>触发时机</th>
+          <th>可能涉及的数据</th>
+          <th>用途</th>
+        </tr>
+        <tr>
+          <td>阿里云短信能力</td>
+          <td>手机号登录、验证码校验、账号注销校验时</td>
+          <td>手机号、验证码请求参数、验证码校验参数</td>
+          <td>完成短信验证码发送与校验</td>
+        </tr>
+        <tr>
+          <td>百度 OCR</td>
+          <td>拍照识别票据时</td>
+          <td>票据图片</td>
+          <td>提取票据图片中的文字信息</td>
+        </tr>
+        <tr>
+          <td>通义千问（Qwen）</td>
+          <td>文本记账解析、OCR 后结构化解析、消费预测时</td>
+          <td>您输入的文本、OCR 识别出的文字、必要的账单摘要</td>
+          <td>识别记账意图、生成结构化账单、提供 AI 分析</td>
+        </tr>
+        <tr>
+          <td>A 股行情与搜索接口/服务</td>
+          <td>搜索沪深 A 股、刷新中国市场股票行情时</td>
+          <td>股票代码、搜索关键词、必要的行情请求参数</td>
+          <td>提供沪深 A 股 / 中国市场股票搜索与行情查询</td>
+        </tr>
+        <tr>
+          <td>Apple App Store 订阅能力</td>
+          <td>购买会员、恢复购买、校验订阅状态时</td>
+          <td>订阅状态、交易凭证、收据校验所需信息</td>
+          <td>完成会员购买、恢复与状态确认</td>
+        </tr>
+        <tr>
+          <td>阿里云函数计算（FC）后端</td>
+          <td>手机号登录用户进行云同步、删除账户、同步会员状态时</td>
+          <td>账单、资产、股票持仓、会员状态、手机号标识</td>
+          <td>提供账户级数据同步、存储与删除处理</td>
+        </tr>
+      </table>
+      <div class="note">
+        游客模式下，账单与资产数据默认仅保存在本地设备，不走账户级云同步。登录手机号账户后，相关数据才会进入阿里云 FC 云同步链路。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>三、我们如何使用这些信息</h2>
+      <ul>
+        <li>提供记账、账单查询、资产管理、沪深 A 股持仓管理等核心功能。</li>
+        <li>在您主动触发时执行票据 OCR、文本记账解析、消费预测等 AI 功能。</li>
+        <li>在手机号登录后完成账户识别、数据同步、购买恢复与会员状态同步。</li>
+        <li>保存必要的本地配置与授权记录，保障应用正常运行。</li>
+        <li>用于故障排查、稳定性改进与账号安全校验。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>四、数据存储与保留</h2>
+      <ul>
+        <li>游客模式下的数据主要保存在您的设备本地。</li>
+        <li>手机号登录后，账单、资产、持仓及会员相关信息可能同步至云端，用于多设备恢复与访问。</li>
+        <li>您在应用内发起账号注销后，服务端会进入注销处理流程，并按当前后端逻辑保留一定周期用于恢复或处理异常，之后再执行彻底清理。</li>
+        <li>卸载应用通常只会清除设备本地数据，不会自动删除已经同步到云端的账户数据。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>五、您的选择与权利</h2>
+      <ul>
+        <li>您可以以游客模式使用应用，并选择是否升级为手机号登录账户。</li>
+        <li>您可以删除单条账单、资产或持仓记录。</li>
+        <li>您可以在应用内退出登录、发起账号注销，或通过支持邮箱联系删除云端账户数据。</li>
+        <li>您可以拒绝授予相机、相册、麦克风或语音识别权限，但相关功能可能因此不可用。</li>
+        <li>您可以在应用内撤回 AI 相关授权记录，后续再次使用相关功能时会重新提示。</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>六、未成年人保护</h2>
-      <p>AI财富账本 不面向未满 18 周岁的未成年人设计或运营。如您未满 18 周岁，请勿使用本应用。</p>
+      <p>本应用面向一般成年用户设计。若您未满 18 周岁，请在监护人指导下使用，或停止使用相关服务。</p>
     </section>
 
     <section class="section">
       <h2>七、联系我们</h2>
-      <p>如您对本隐私政策、账号数据、删除申请或其他隐私问题有任何疑问，请通过以下方式联系我们：</p>
+      <p>如您有隐私、数据删除、账号注销、订阅恢复或其他支持需求，请联系我们：</p>
       <ul>
-        <li><strong>邮箱：</strong><a href="mailto:philyu2023@qq.com">philyu2023@qq.com</a></li>
+        <li><strong>联系邮箱：</strong>philyu2023@qq.com</li>
       </ul>
-      <p>我们将在合理期限内进行处理与回复。</p>
+      <p>我们会在合理时间内处理您的请求。</p>
     </section>
 
-    <p class="footer">© 2026 AI财富账本. All rights reserved.</p>
+    <p class="footer">© AI财富账本 · Privacy Policy</p>
   </div>
 </body>
 </html>

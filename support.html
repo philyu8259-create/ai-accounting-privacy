@@ -3,235 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>支持中心 | AI财富账本</title>
-
+  <title>支持页面 | AI财富账本</title>
   <style>
     :root {
-      --bg: #f5fbf8;
-      --card: #ffffff;
+      --primary: #10b981;
+      --primary-dark: #059669;
       --text: #1f2937;
       --muted: #6b7280;
-      --line: #dbe7e1;
-      --brand: #10b981;
-      --brand-dark: #059669;
-      --brand-soft: #ecfdf5;
-      --shadow: 0 12px 32px rgba(16, 185, 129, 0.08);
-      --radius: 18px;
+      --border: #e5e7eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(180deg, #f3fbf7 0%, #ffffff 260px);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.78;
+      line-height: 1.8;
     }
     .wrap {
-      max-width: 980px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 32px 20px 56px;
     }
-    .hero {
-      background: linear-gradient(135deg, rgba(16,185,129,0.14) 0%, rgba(16,185,129,0.05) 45%, rgba(255,255,255,0.96) 100%);
-      border: 1px solid rgba(16,185,129,0.14);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      margin-bottom: 22px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      background: var(--brand-soft);
-      color: var(--brand-dark);
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(30px, 4vw, 42px);
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-    }
-    .subtitle {
-      margin: 14px 0 0;
-      color: #374151;
-      font-size: 16px;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .meta span {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(16,185,129,0.1);
-      border-radius: 999px;
-      padding: 8px 12px;
-    }
-    .section {
+    .hero, .section {
       background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin: 18px 0;
+      border: 1px solid var(--border);
+      border-radius: 18px;
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
-    h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
-      color: #065f46;
-      letter-spacing: -0.01em;
+    .hero {
+      padding: 28px;
+      margin-bottom: 18px;
     }
-    h3 {
-      margin: 18px 0 10px;
-      font-size: 17px;
-      color: #047857;
+    .section {
+      padding: 24px 28px;
+      margin-top: 16px;
+    }
+    h1, h2 { margin: 0 0 12px; }
+    h1 {
+      color: var(--primary-dark);
+      font-size: 32px;
+      line-height: 1.25;
+    }
+    h2 {
+      color: var(--primary-dark);
+      font-size: 22px;
+      margin-top: 4px;
     }
     p { margin: 10px 0; }
-    ul, ol { margin: 10px 0; padding-left: 22px; }
-    li { margin: 8px 0; }
-    a { color: var(--brand-dark); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    ul { margin: 10px 0; padding-left: 22px; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
     .note {
-      margin-top: 14px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
       padding: 14px 16px;
-      border-radius: 14px;
-      background: #f8fffb;
-      border: 1px solid #d8f3e6;
-      color: #166534;
+      margin-top: 16px;
     }
-    .table-wrap {
-      overflow-x: auto;
-      margin-top: 14px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 680px;
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-    th, td {
-      border: 1px solid #e5efe9;
-      padding: 12px 14px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background: #f7fcfa;
-      color: #065f46;
-      font-weight: 700;
-    }
-    strong { color: #065f46; }
-    code {
-      background: #f3f4f6;
-      padding: 2px 6px;
-      border-radius: 6px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.95em;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-    .tile {
-      padding: 16px;
-      background: #fcfffd;
-      border: 1px solid #e3f3eb;
-      border-radius: 16px;
-    }
-    .tile h3 { margin-top: 0; }
+    a { color: var(--primary-dark); }
     .footer {
       color: var(--muted);
       font-size: 14px;
       text-align: center;
-      margin-top: 28px;
-    }
-    @media (max-width: 640px) {
-      .wrap { padding: 18px 14px 36px; }
-      .hero, .section { padding: 18px; border-radius: 18px; }
-      .meta { gap: 8px; }
-      .meta span { width: 100%; }
+      margin-top: 22px;
     }
   </style>
-
 </head>
 <body>
   <div class="wrap">
-    <header class="hero">
-      <div class="eyebrow">支持中心</div>
-      <h1>AI财富账本 支持页</h1>
-      <p class="subtitle">如您需要产品帮助、反馈问题、处理订阅、申请账号或云端数据删除，请通过以下方式联系我们。</p>
-      <div class="meta">
-        <span>适用于：AI财富账本</span>
-        <span>更新日期：2026年4月15日</span>
-        <span>响应方式：邮件支持</span>
+    <section class="hero">
+      <h1>支持页面 | AI财富账本</h1>
+      <p class="meta">中文版支持与帮助</p>
+      <p>如果您在使用 <strong>AI财富账本</strong> 中文版时遇到问题，或需要咨询账号、隐私、会员、数据删除、OCR 识别、AI 解析、A 股行情与云同步等事项，可通过本页方式联系我们。</p>
+      <div class="note">
+        中文版当前的主要能力链路为：手机号验证码登录、百度 OCR 票据识别、通义千问解析、沪深 A 股 / 中国市场股票能力，以及阿里云函数计算云同步。请按实际问题类型描述，我们可以更快定位。
       </div>
-    </header>
+    </section>
 
     <section class="section">
       <h2>联系我们</h2>
       <ul>
-        <li><strong>邮箱：</strong><a href="mailto:philyu2023@qq.com">philyu2023@qq.com</a></li>
+        <li><strong>联系邮箱：</strong>philyu2023@qq.com</li>
       </ul>
-      <p>如涉及账号问题，请尽量使用注册邮箱发送，以便我们更快核验身份。</p>
     </section>
 
     <section class="section">
-      <h2>来信建议包含的信息</h2>
-      <div class="grid">
-        <div class="tile">
-          <h3>设备与版本</h3>
-          <p>设备型号、iOS 版本、应用版本号。</p>
-        </div>
-        <div class="tile">
-          <h3>问题描述</h3>
-          <p>出现问题的页面、操作步骤、期望结果与实际结果。</p>
-        </div>
-        <div class="tile">
-          <h3>辅助材料</h3>
-          <p>截图、录屏、报错文案、登录方式或相关账号信息。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>账号与数据删除</h2>
-      <p>如果您需要删除云端账号数据，请发邮件并说明以下信息：</p>
+      <h2>来信建议附带的信息</h2>
       <ul>
-        <li>账号邮箱或登录方式</li>
-        <li>希望删除的数据范围</li>
-        <li>必要时用于核验身份的补充信息</li>
+        <li>设备型号、系统版本、App 版本号</li>
+        <li>当前使用状态：游客模式或手机号登录</li>
+        <li>问题出现时间、操作步骤、报错文案</li>
+        <li>相关截图或录屏</li>
+        <li>如涉及 OCR，请说明是拍照上传还是相册导入，并尽量提供脱敏后的票据示例</li>
+        <li>如涉及 AI 解析或消费预测，请提供脱敏后的输入文本或识别结果</li>
+        <li>如涉及会员，请附购买时间、恢复购买结果或相关提示信息</li>
+        <li>如涉及 A 股持仓或行情，请附股票代码、搜索关键词与问题发生时间</li>
       </ul>
-      <div class="note">为保护账号安全，我们可能会在处理前要求您进一步确认账号归属。</div>
     </section>
 
     <section class="section">
-      <h2>订阅与付费</h2>
-      <p>订阅费用由 Apple 负责结算和管理。您可以在 App Store 账户设置中管理或取消订阅。</p>
+      <h2>常见问题排查</h2>
+      <ul>
+        <li><strong>手机号登录：</strong>请确认手机号输入正确、验证码是否收到，以及是否有网络异常提示。</li>
+        <li><strong>票据识别：</strong>请确认已授予相机或相册权限，图片内容清晰、金额区域无遮挡。</li>
+        <li><strong>语音输入：</strong>请确认已授予麦克风和语音识别权限。</li>
+        <li><strong>云同步：</strong>游客模式默认不走账户级云同步，需登录手机号账户后才会同步相关数据。</li>
+        <li><strong>股票功能：</strong>中文版股票能力面向沪深 A 股 / 中国市场，不适用于海外股票市场场景。</li>
+        <li><strong>会员状态：</strong>可先尝试应用内恢复购买；若仍异常，请附相关提示信息联系支持。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>账号注销与数据删除</h2>
+      <p>如需删除云端数据、注销手机号账户或提交隐私相关请求，请发送邮件联系我们。为保护账户安全，我们可能要求您补充手机号验证或其他必要的账号归属信息。</p>
     </section>
 
     <section class="section">
       <h2>相关页面</h2>
       <ul>
-        <li><a href="https://philyu8259-create.github.io/ai-accounting-privacy/privacy_policy.html">隐私政策</a></li>
-        <li><a href="https://www.apple.com/legal/internet-services/itunes/">Apple 标准许可协议</a></li>
+        <li><a href="privacy_policy.html">隐私政策</a></li>
+        <li><a href="eula.html">用户协议</a></li>
       </ul>
     </section>
 
-    <p class="footer">© 2026 AI财富账本. All rights reserved.</p>
+    <p class="footer">© AI财富账本 · Support</p>
   </div>
 </body>
 </html>
